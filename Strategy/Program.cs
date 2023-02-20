@@ -44,7 +44,7 @@ namespace Strategy
                     currentHero = i;
                 }
 
-                Console.WriteLine($"\nГерой #{i + 1}, ID {heroes[i].Id}, его команда:");
+                Console.WriteLine($"\nГерой #{i + 1}, ID = {heroes[i].Id}, кол-во солдат в его отряде = {soldiers[i].Count}, его команда:");
                 for(int j = 0; j < count; j++) Console.WriteLine($"{j + 1}. ID солдата {soldiers[i][j].Id}");
             }
 
