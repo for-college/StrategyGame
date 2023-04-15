@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    public class Hero
+    public class Hero : Person
     {
-        public int Id { get; set; }
         public int TeamId { get; set; }
 
         public int lvl = 1;
 
-        Random rand = new Random(DateTime.Now.Millisecond);
-        public Hero() => Id = rand.Next();
+        public Hero() : base() { }
         public Hero(int teamId) 
         {
-            Id = rand.Next();
             System.Threading.Thread.Sleep(1);
             TeamId = teamId;
         }
